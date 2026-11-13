@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #6A5446;
+  --color-secondary: #B8924A;
+  --color-cream: #F5EEE2;
+  --color-espresso: #2B211C;
+  --color-blush: #E8D5C8;
+  --color-bg: #FAF7F2;
+  --color-fg: #2B211C;
+  --radius: 0.75rem;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+}
+
+.dark {
+  --color-bg: #1B1512;
+  --color-fg: #F5EEE2;
+  --color-espresso: #1B1512;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Luxury Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 146, 74, 0.2);
+}
+
+.dark .glass-panel {
+  background: rgba(43, 33, 28, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 146, 74, 0.25);
+}
+
+.glass-card {
+  background: rgba(245, 238, 226, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(184, 146, 74, 0.18);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .glass-card {
+  background: rgba(35, 26, 22, 0.65);
+  border: 1px solid rgba(184, 146, 74, 0.25);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(106, 84, 70, 0.15), 0 0 20px -2px rgba(184, 146, 74, 0.25);
+  border-color: rgba(184, 146, 74, 0.45);
+}
+
+/* Gold Gradient Accents */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #CFAC42 0%, #B8924A 50%, #916F2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #D4AF37 0%, #B8924A 50%, #997334 100%);
+}
+
+.gold-border {
+  border: 1px solid rgba(184, 146, 74, 0.3);
+}
+
+/* Heritage South Indian Motifs */
+.temple-border-divider {
+  height: 18px;
+  background-image: radial-gradient(circle at 10px 10px, var(--color-secondary) 2px, transparent 0);
+  background-size: 20px 20px;
+  opacity: 0.4;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1C1512;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8924A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6A5446;
+}
+
+/* Subtle Film Grain */
+.noise-bg {
+  position: relative;
+}
+.noise-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 44px Mobile Touch Targets Minimum */
+button, a, input, select {
+  min-height: 44px;
+}
+
+@media (pointer: coarse) {
+  .desktop-cursor {
+    display: none !important;
+  }
+}
+

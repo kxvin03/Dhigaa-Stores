@@ -1,0 +1,22 @@
+{
+  "name": "Dhigaa Fashions — Luxury Indian Couture",
+  "short_name": "Dhigaa",
+  "description": "Ultra-realistic luxury boutique selling pure Kanchipuram silks, Chettinad cottons and bridal wear in Erode, Tamil Nadu.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2B211C",
+  "theme_color": "#B8924A",
+  "icons": [
+    {
+      "src": "/assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
