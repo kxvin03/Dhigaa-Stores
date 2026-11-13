@@ -9,3 +9,9 @@ dev.db-journal
 *.log
 .DS_Store
 
+
+# Local AI tooling
+.agents/
+.claude/
+.sf/
+skills-lock.json
